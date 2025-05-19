@@ -1,0 +1,61 @@
+.Dd $Mdocdate$
+.Dt cstyle 7
+.Os
+.
+.Sh NAME
+.Nm cstyle
+.Nd my C code style
+.
+.Sh DESCRIPTION
+My code style based on linux kernel code style
+but I changed some things in it for me.
+.
+.Ss Indetation
+I indent my code by 8 spaces.
+Lines should be shorter than 110 charcters.
+.
+.Ss Comments
+I never use "//", instead I use "/* comment */", for example:
+.Bd -literal -offset indent
+/* some miltiline
+ * comment */
+.Ed
+.Pp
+In code I comment every defention at top level.
+.
+.Ss Backets on line/after line
+In function defentions I write backets after line
+but on other cases I write backets on line with space.
+.
+.Ss Switch cases
+Cases should be writing at switch level, for example:
+.Bd -literal -offset indent
+switch (c) {
+case 'a':
+	...
+	break;
+
+case 'b':
+	...
+	break;
+
+case 'c':
+	...
+	break;
+};
+.Ed
+.
+.Ss Project strucure
+All my projects should have main source file (for example "some_utility.c"),
+LICENSE file with license, Makefile for compiling and installing project,
+manpage file (for example "some_utility.1") and README file.
+.
+.Sh NOTES
+Not all my projects satisfy this code style,
+but I try write new projects following this code style.
+.
+.Sh AUTHORS
+.An gimura2022 Aq Mt gimura0001@gmail.com
+.
+.Sh SEE ALSO
+.Lk https://www.kernel.org/doc/html/v4.10/process/coding-style.html linux code style
