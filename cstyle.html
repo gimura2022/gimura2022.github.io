@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+  <title>cstyle(7)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">cstyle(7)</td>
+    <td class="head-vol">Miscellaneous Information Manual</td>
+    <td class="head-rtitle">cstyle(7)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<section class="Sh">
+<h1 class="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+<p class="Pp"><code class="Nm">cstyle</code> &#x2014; <span class="Nd">my C code
+    style</span></p>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+<p class="Pp">My code style based on linux kernel code style but I changed some
+    things in it for me.</p>
+<section class="Ss">
+<h2 class="Ss" id="Indetation"><a class="permalink" href="#Indetation">Indetation</a></h2>
+<p class="Pp">I indent my code by 8 spaces. Lines should be shorter than 110
+    charcters.</p>
+</section>
+<section class="Ss">
+<h2 class="Ss" id="Comments"><a class="permalink" href="#Comments">Comments</a></h2>
+<p class="Pp">I never use &quot;//&quot;, instead I use &quot;/* comment
+    */&quot;, for example:</p>
+<div class="Bd Pp Bd-indent Li">
+<pre>/* some miltiline
+ * comment */</pre>
+</div>
+<p class="Pp">In code I comment every defention at top level.</p>
+</section>
+<section class="Ss">
+<h2 class="Ss" id="Backets_on_line/after_line"><a class="permalink" href="#Backets_on_line/after_line">Backets
+  on line/after line</a></h2>
+<p class="Pp">In function defentions I write backets after line but on other
+    cases I write backets on line with space.</p>
+</section>
+<section class="Ss">
+<h2 class="Ss" id="Switch_cases"><a class="permalink" href="#Switch_cases">Switch
+  cases</a></h2>
+<p class="Pp">Cases should be writing at switch level, for example:</p>
+<div class="Bd Pp Bd-indent Li">
+<pre>switch (c) {
+case 'a':
+	...
+	break;
+
+case 'b':
+	...
+	break;
+
+case 'c':
+	...
+	break;
+};</pre>
+</div>
+</section>
+<section class="Ss">
+<h2 class="Ss" id="Project_strucure"><a class="permalink" href="#Project_strucure">Project
+  strucure</a></h2>
+<p class="Pp">All my projects should have main source file (for example
+    &quot;some_utility.c&quot;), LICENSE file with license, Makefile for
+    compiling and installing project, manpage file (for example
+    &quot;some_utility.1&quot;) and README file.</p>
+</section>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="NOTES"><a class="permalink" href="#NOTES">NOTES</a></h1>
+<p class="Pp">Not all my projects satisfy this code style, but I try write new
+    projects following this code style.</p>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="AUTHORS"><a class="permalink" href="#AUTHORS">AUTHORS</a></h1>
+<p class="Pp"><span class="An">gimura2022</span>
+    &lt;<a class="Mt" href="mailto:gimura0001@gmail.com">gimura0001@gmail.com</a>&gt;</p>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SEE_ALSO"><a class="permalink" href="#SEE_ALSO">SEE
+  ALSO</a></h1>
+<p class="Pp"><a class="Lk" href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html">linux
+    code style</a></p>
+</section>
+</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">May 19, 2025</td>
+    <td class="foot-os">Debian</td>
+  </tr>
+</table>
+</body>
+</html>

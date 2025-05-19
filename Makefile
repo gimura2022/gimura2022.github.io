@@ -1,14 +1,14 @@
 MANDOC = mandoc
 RM     = rm -rf
 
-PAGES = index.7 cstyle.7
 
 .PHONY: all
-all: index.html
+all: index.html cstyle.html
 
-.PHONY: clear
-clear:
+.PHONY: clean
+clean:
 	$(RM) index.html
+	$(RM) cstyle.html
 
-index.html: $(PAGES)
+%.html: %.7
 	$(MANDOC) $< -T html -Ostyle=style.css > $@
