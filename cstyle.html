@@ -73,6 +73,61 @@ case 'c':
     compiling and installing project, manpage file (for example
     &quot;some_utility.1&quot;) and README file.</p>
 </section>
+<section class="Ss">
+<h2 class="Ss" id="Nameing_conventions"><a class="permalink" href="#Nameing_conventions">Nameing
+  conventions</a></h2>
+<p class="Pp">For variables, functions, structures, enums, files and macro
+    functions I use snake_case name but typedefs have ending &quot;_t&quot; and
+    function pointer typedef have &quot;_f&quot; ending. For enum fields and
+    macro constants I use upper snake case:</p>
+<div class="Bd Pp Bd-indent Li">
+<pre>void* PascalCaseName; /* incorrect */
+void* snake_case_name; /* correct */
+
+#define SOME_MACRO(x) ... /* incorrect */
+#define some_macro(x) ... /* correct */
+
+typedef int integer; /* incorrect */
+typedef int integer_t; /* correct */
+
+typedef void (*handler)(void); /* incorrect */
+typedef void (*handler_f)(void); /* correct */
+
+enum {
+	enum_value, /* incorrect */
+	ENUM_VALUE, /* correct */
+};</pre>
+</div>
+</section>
+<section class="Ss">
+<h2 class="Ss" id="Pointer_type"><a class="permalink" href="#Pointer_type">Pointer
+  type</a></h2>
+<p class="Pp">I write &quot;*&quot; in pointers without spaces at left and with
+    one space at right, if I not define more one pointer variable in this line I
+    write &quot;*&quot; at right.</p>
+<div class="Bd Pp Bd-indent Li">
+<pre>void *ptr; /* incorrect */
+void* ptr; /* correct */
+
+void* a,* b,* c; /* incorrect */
+void *a, *b, *c; /* correct */</pre>
+</div>
+</section>
+<section class="Ss">
+<h2 class="Ss" id="Headers_shielding"><a class="permalink" href="#Headers_shielding">Headers
+  shielding</a></h2>
+<p class="Pp">For Headers shielding I use something like this:</p>
+<div class="Bd Pp Bd-indent Li">
+<pre>#ifndef _header_name_h
+#define _header_name_h
+
+
+#endif</pre>
+</div>
+According to my nameing conventions I should write &quot;#ifndef
+  _HEADER_NAME_H&quot; and &quot;#define _HEADER_NAME_H&quot; but I'm writing
+  this lower case out of tradition.
+</section>
 </section>
 <section class="Sh">
 <h1 class="Sh" id="NOTES"><a class="permalink" href="#NOTES">NOTES</a></h1>

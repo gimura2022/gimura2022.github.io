@@ -50,6 +50,54 @@ All my projects should have main source file (for example "some_utility.c"),
 LICENSE file with license, Makefile for compiling and installing project,
 manpage file (for example "some_utility.1") and README file.
 .
+.Ss Nameing conventions
+For variables, functions, structures, enums, files and macro functions I use snake_case name
+but typedefs have ending "_t" and function pointer typedef have "_f" ending.
+For enum fields and macro constants I use upper snake case:
+.Bd -literal -offset indent
+void* PascalCaseName; /* incorrect */
+void* snake_case_name; /* correct */
+
+#define SOME_MACRO(x) ... /* incorrect */
+#define some_macro(x) ... /* correct */
+
+typedef int integer; /* incorrect */
+typedef int integer_t; /* correct */
+
+typedef void (*handler)(void); /* incorrect */
+typedef void (*handler_f)(void); /* correct */
+
+enum {
+	enum_value, /* incorrect */
+	ENUM_VALUE, /* correct */
+};
+.Ed
+.
+.Ss Pointer type
+I write "*" in pointers without spaces at left and with one space at right,
+if I not define more one pointer variable in this line I write "*" at right.
+.Bd -literal -offset indent
+void *ptr; /* incorrect */
+void* ptr; /* correct */
+
+void* a,* b,* c; /* incorrect */
+void *a, *b, *c; /* correct */
+.Ed
+.
+.Ss Headers shielding
+For Headers shielding I use something like this:
+.Bd -literal -offset indent
+#ifndef _header_name_h
+#define _header_name_h
+
+...
+
+#endif
+.Ed
+According to my nameing conventions
+I should write "#ifndef _HEADER_NAME_H" and "#define _HEADER_NAME_H"
+but I'm writing this lower case out of tradition.
+.
 .Sh NOTES
 Not all my projects satisfy this code style,
 but I try write new projects following this code style.
